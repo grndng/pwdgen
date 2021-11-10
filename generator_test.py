@@ -1,4 +1,10 @@
-from main import addition, subtraction, newfunction, pwdgen
+"""Testfile for generator.py
+
+Simply tests my made up requirements for what a strong
+and weak password should look like.
+"""
+
+from generator import pwdgen
 import string
 
 def test_pwdgen_strong_length():
@@ -13,6 +19,7 @@ def test_pwdgen_weak_length():
 
 def test_pwdgen_strong_consecutive_lower():
     """Test if there are consecutive or duplicate symbols in strong passwords"""
+    print(pwdgen("strong"))
     assert [
         0
         for i, j in enumerate(sorted(pwdgen("strong").lower())[:-1])
@@ -21,7 +28,7 @@ def test_pwdgen_strong_consecutive_lower():
 
 
 def test_pwdgen_weak_consecutive_lower():
-    """Test if there are consecutive or duplicate symbols in weak passwords"""
+    """Test if there are consecutive symbols in weak passwords"""
     assert [
         0
         for i, j in enumerate(pwdgen("weak").lower()[:-1])
