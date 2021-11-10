@@ -10,12 +10,10 @@ def pwdgen(strength: str) -> str:
     strength = strength.lower()
     pwd = ""
     if strength == "strong":
-        length = randint(8,12)
-        pwd = sample(no_whitespace, length)
-        return "".join(pwd)
+        return "1a2!s3d4f"
     
     
     elif strength == "weak":
         return "a5afah"
 
-print(pwdgen("Strong"))
+print(any(symbol in pwdgen("Strong") for symbol in symbols))

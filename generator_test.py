@@ -7,6 +7,7 @@ and weak password should look like.
 from generator import pwdgen
 import string
 
+
 def test_pwdgen_strong_length():
     """Test if the length of strong passwords match"""
     assert 8 <= len(pwdgen("strong")) <= 12
@@ -38,18 +39,14 @@ def test_pwdgen_weak_consecutive_lower():
 
 def test_pwdgen_strong_symbols_duplicates():
     """Test if there are symbols in strong passwords"""
-    assert len([i for i in pwdgen("strong") if i in string.punctuation]) != 0
+    assert any(symbol in pwdgen("strong") for symbol in string.punctuation) == True
+    # any() is probably faster than iterating around
+    # assert len([i for i in pwdgen("strong") if i in string.punctuation]) != 0
 
 
 def test_pwdgen_weak_symbols():
     """Test if there are symbols in weak passwords"""
-    assert len([i for i in pwdgen("weak") if i not in string.punctuation]) == len(
-        pwdgen("weak")
-    )
-
-
-def test_pwdgen_weak_symbols():
-    """Test if there are symbols in weak passwords"""
-    assert len([i for i in pwdgen("weak") if i not in string.punctuation]) == len(
-        pwdgen("weak")
-    )
+    assert any(symbol in pwdgen("weak") for symbol in string.punctuation) == False
+    # assert len([i for i in pwdgen("weak") if i not in string.punctuation]) == len(
+    #    pwdgen("weak")
+    # )
