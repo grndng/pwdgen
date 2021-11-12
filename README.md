@@ -6,20 +6,20 @@ Disclaimer: I have no idea how secure the generated passwords are since I'm usin
 
 ---
 
-**Strong passwords**, by my randomly made up definition, consist of:
+**Strong 💪 passwords**, by my randomly made up definition, consist of:
 * a length between 8 and 12 (included)
 * at least one digit, letter and symbol (string.ascii_punctuation)
 
-**Strong passwords** don't allow:
+**Strong 💪 passwords** don't allow:
 * duplicates (`d` and `D` count as duplicate)
 * therefore consecutive elements (`aA`, `**`)
 
 ---
-*Weak passwords*, by my randomly made up definition, consist of:
+*Weak 👶 passwords*, by my randomly made up definition, consist of:
 * a length between 6 and 8 (included)
 * at least one digit and letter
 
-*Weak passwords* don't allow:
+*Weak 👶 passwords* don't allow:
 * the usage of consecutive letters (`d` and `D` count as consecutive)
 
 ---
@@ -40,7 +40,7 @@ On Mac, pyperclip makes use of the pbcopy and pbpaste commands, which should com
 On Linux, this module makes use of the xclip or xsel commands, which should come with the os. I had to install xsel (I'm using Arch, btw).
 Otherwise on Linux, you will need the gtk or PyQt4 modules installed.
 
-To generate a password, you have to run `pwdgen.py` with an argument (in case you want to create a weak password):
+To generate a password, you have to run `pwdgen.py` with an argument (in case you want to create a weak password). By default `pwdgen.py` will create strong passwords:
 ```shell
 python pwdgen.py -s strong      # for strong passwords
 python pwdgen.py -s weak        # for weak passwords
