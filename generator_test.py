@@ -1,7 +1,8 @@
-"""Testfile for generator.py
+"""generator_test.py
 
-Simply tests my made up requirements for what a strong
-and weak password should look like.
+Testfile for generator.py: Simply tests my made up 
+requirements for what a strong and weak password 
+should look like.
 """
 
 from generator import pwdgen
@@ -40,10 +41,11 @@ def test_pwdgen_strong_symbols_duplicates():
 
 
 def test_pwdgen_weak_symbols():
-    """Test if there are symbols in weak passwords"""
+    """Test if there are symbols in weak passwords (lazy)"""
     pwd = pwdgen("weak")
     assert any(symbol in pwd for symbol in string.punctuation) == False
     # using any instead of iterating over list:
     # assert len([i for i in pwdgen("weak") if i not in string.punctuation]) == len(
     #    pwdgen("weak")
     # )
+    # can also test with re [^A-Za-z0-9]+
