@@ -37,6 +37,7 @@ parser.add_argument(
 
 args = parser.parse_args()
 
+
 def generate(args):
     """Generating passwords based on user input. By default, strong passwords are generated.
 
@@ -60,5 +61,5 @@ if __name__ == "__main__":
     print("Copying password to clipboard...")
     if pyperclip.copy(pwd) == None:
         print(
-            "Password successfully copied to clipboard. Use CTRL+V to paste password!"
+            "Password successfully copied to clipboard.\nUse CTRL+V to paste password!"
         )
