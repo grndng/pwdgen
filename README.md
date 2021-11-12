@@ -3,6 +3,7 @@
 ### A simple password generator written in Python. pwdgen allows you to create a weak or strong password and copies it to your clipboard. Shitty codebase included!
 ---
 Disclaimer: I have no idea how secure the generated passwords are since I'm using built in functions (especially from `random` (https://docs.python.org/3/library/random.html)) to randomize strings.
+
 ---
 
 **Strong passwords**, by my randomly made up definition, consist of:
