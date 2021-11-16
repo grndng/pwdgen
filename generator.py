@@ -54,13 +54,10 @@ def mandatory_strong() -> str:
             None
 
     Returns:
-            pwd (str): Returns
+            pwd (str): Returns pwd as str to use in pwdgen()
 
     """
-    # TODO: concatenate string in a simpler fashion
     pwd = ""
-    pwd += "".join(sample(alphabet[:26], 1))
-    pwd += "".join(sample(alphabet[26:], 1))
-    pwd += "".join(sample(digits, 1))
-    pwd += "".join(sample(symbols, 1))
+    one_of_each = "".join(sample(alphabet[:26], 1)) + "".join(sample(alphabet[26:], 1)) + "".join(sample(digits, 1)) + "".join(sample(symbols, 1))
+    pwd += one_of_each
     return pwd
