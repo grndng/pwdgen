@@ -11,7 +11,6 @@ import string
 
 def test_pwdgen_strong_length():
     """Test if the length of strong passwords match"""
-    print(pwdgen("strong"))
     assert 8 <= len(pwdgen("strong")) <= 12
 
 

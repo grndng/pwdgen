@@ -14,7 +14,6 @@ weakpw = string.ascii_letters + string.digits
 symbols = string.punctuation
 no_whitespace = string.printable.strip()
 
-
 def pwdgen(strength: str) -> str:
     """Sloppy password generator that creates passwords based
     on randomly thought out criteria.
@@ -60,4 +59,6 @@ def mandatory_strong() -> str:
     pwd = ""
     one_of_each = "".join(sample(alphabet[:26], 1)) + "".join(sample(alphabet[26:], 1)) + "".join(sample(digits, 1)) + "".join(sample(symbols, 1))
     pwd += one_of_each
-    return pwd
+    return pwd <- this is always len(x) == 4
+
+if __name__ == "__main__":
