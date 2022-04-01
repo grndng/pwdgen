@@ -59,6 +59,4 @@ def mandatory_strong() -> str:
     pwd = ""
     one_of_each = "".join(sample(alphabet[:26], 1)) + "".join(sample(alphabet[26:], 1)) + "".join(sample(digits, 1)) + "".join(sample(symbols, 1))
     pwd += one_of_each
-    return pwd <- this is always len(x) == 4
-
-if __name__ == "__main__":
+    return pwd

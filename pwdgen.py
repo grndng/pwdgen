@@ -1,9 +1,3 @@
-"""parser.py
-
-Utilities for pwdgen.py to enable the creation of
-passwords from the command line interface
-"""
-
 import argparse
 from generator import pwdgen
 import pyperclip
@@ -18,22 +12,23 @@ parser.add_argument(
     type=str,
     help="To create a strong password, enter 'strong'. To create a weak password, enter 'weak'",
 )
+
 """
 parser.add_argument(
-    "-h",
+    "-hd",
     "--hidden",
     default = 0,
     type=str,
     help="If you do not want the password to print to the command line interface, use -h",
 )
-
+"""
 parser.add_argument(
     "-c",
     "--copy",
     type=str,
     help="Copies the password directly into your clipboard. Disabled by default",
 )
-"""
+
 
 args = parser.parse_args()
 
